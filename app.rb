@@ -2,11 +2,11 @@
 require "sinatra"
 require 'sinatra/activerecord'
 require "sinatra/reloader" if development?
-require './models'
+# require './models'
 require "sinatra/flash"
 
 # ======= database =======
-# set :database, "sqlite3:appointments.db"
+set :database, "sqlite3:mike_sqaured.db"
 
 # =======  sessions =======
 enable :sessions
