@@ -2,7 +2,8 @@
 require "sinatra"
 require 'sinatra/activerecord'
 require "sinatra/reloader" if development?
-# require './models'
+require "sass"
+require './models'
 require "sinatra/flash"
 
 # ======= database =======

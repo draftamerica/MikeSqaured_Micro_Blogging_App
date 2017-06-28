@@ -6,5 +6,6 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'rake'
 gem 'sinatra-flash'
+gem 'sass'
 # == sqlite3 ==
 gem 'sqlite3'
