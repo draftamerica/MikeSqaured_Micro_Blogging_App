@@ -1,0 +1,17 @@
+<!-- ======= views/profile.erb ======= -->
+<h1>Profile</h1>
+
+<div id="account_details">
+    <p>Account Details</p>
+    <p> First Name: <%= @user[:firstname] %> </p>
+    <p> Last Name: <%= @user[:lastname] %> </p>
+    <p> Userame: <%= @user[:username] %> </p>
+    <p> Password: <%= @user[:password] %> </p>
+    <p> Email: <%= @user[:email] %> </p>
+</div>
+
+<div id="edit_account">
+    <p>Change Profile Settings</p>
+    <a href="/update_clinic_form/<%= session[:user_id]%>">Update your Profile</a><br>
+    <a href="/delete_clinic/<%= session[:user_id]%>">Delete your Profile</a><br>
+</div>

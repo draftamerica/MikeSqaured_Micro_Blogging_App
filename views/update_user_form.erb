@@ -1,0 +1,14 @@
+<!-- ======= views/update_user_form.erb ======= -->
+<h1>Update User Form</h1>
+
+<!-- firstname, lastname, username, password, email -->
+
+<form  id="user_registration_form" method="POST" action="/users">
+    <div><label for="firstname">First Name</label><input type="firstname" name="firstname" value="<%= @user.firstname %>"></div>
+    <div><label for="lastname">Last Name</label><input type="lastname" name="lastname" value="<%= @user.lastname %>"></div>
+    <div><label for="username">Username</label><input type="username" name="username" value="<%= @user.username %>"></div>
+    <div><label for="password">Password</label><input type="password" name="password" value="<%= @user.password %>"></div>
+    <div><label for="email">Email</label><input type="email" name="email" value="<%= @user.email %>"></div>
+    <input type="submit" id="submit">
+    <input type="hidden" value="<%= @clinic.id %>" name="id">
+</form>
