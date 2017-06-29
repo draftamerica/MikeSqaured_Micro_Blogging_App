@@ -4,10 +4,17 @@
 <!-- firstname, lastname, username, password, email -->
 
 <form  id="user_registration_form" method="POST" action="/user">
-    <div><label for="firstname">First Name</label><input type="firstname" name="firstname" value=""></div>
-    <div><label for="lastname">Last Name</label><input type="lastname" name="lastname" value=""></div>
-    <div><label for="username">Username</label><input type="username" name="username" value=""></div>
-    <div><label for="password">Password</label><input type="password" name="password" value=""></div>
-    <div><label for="email">Email</label><input type="email" name="email" value=""></div>
-    <input type="submit" id="submit">
+
+    <div><label for="firstname"><p id="regfname"><b>First Name</b></p></label><input type="firstname" name="firstname" id="fnamereg" value=""></div>
+
+    <div><label for="lastname"><p id="reglname"><b>Last Name</b></p></label><input type="lastname" name="lastname" id="lnamereg" value=""></div>
+
+    <div><label for="username"><p id="regid"><b>Username</b></p></label><input type="username" id="userreg" name="username" value=""></div>
+
+    <div><label for="password"><p id="regpassword"><b>Password</b></p></label><input type="password" id="passwordreg" name="password" value=""></div>
+
+    <div><label for="email"><p id="regemail"><b>Email</b></p></label><input type="email" id="emailreg" name="email" value=""></div>
+
+    <input type="submit" id="submituser">
+
 </form>
