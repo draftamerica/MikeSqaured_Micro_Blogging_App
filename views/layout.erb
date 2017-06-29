@@ -2,7 +2,7 @@
 <html lang="en">
   <!-- ======= ======= ======= head ======= ======= ======= -->
 	<head>
-	    <link rel="stylesheet" type="text/css" href="styles.css">
+	    <link rel="stylesheet" type="text/css" href="/styles.css">
 	</head>
   <!-- ======= ======= ======= body ======= ======= ======= -->
 	<body>
@@ -10,10 +10,16 @@
 	    <div id="header" class="section">
 	        <p>header</p>
 	    <!-- ======= menu ======= -->
-		<div id="menu-container" class="section">
-			<%= erb :menu %>
-		</div>
+			<div id="menu-container" class="section">
+				<%= erb :menu %>
+			</div>
 	    </div>
+		<!-- ====== Flash Notice ====== -->
+		<% if flash[:notice] %>
+			<div class="flash_notice">
+				<%= flash[:notice] %>
+			</div>
+		<%end%>
 	    <!-- ======= content ======= -->
 		<div id="yield-container" class="section">
 			<%= yield %>

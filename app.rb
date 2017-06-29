@@ -3,8 +3,10 @@ require "sinatra"
 require 'sinatra/activerecord'
 require "sinatra/reloader" if development?
 require "sass"
-require './models'
 require "sinatra/flash"
+
+# ======= models ========
+require './models'
 
 # ======= database =======
 set :database, "sqlite3:mike_sqaured.db"
@@ -57,12 +59,12 @@ post '/user' do
 	redirect '/profile'
 end
 # == Read User Info
-get '/all_users' do
-	puts "\n******* all_users *******"
-	@users = User.all
-	puts "@users.inspect: #{@users.inspect}"
-	erb :all_users
-end
+# get '/all_users' do
+# 	puts "\n******* all_users *******"
+# 	@users = User.all
+# 	puts "@users.inspect: #{@users.inspect}"
+# 	erb :all_users
+# end
 # # == Update User Info
 get '/update_user_form' do
 	puts "\n******* update_user_form *******"
@@ -78,8 +80,9 @@ post '/update' do
 	puts "\n******* update *******"
 	puts "params.inspect: #{params.inspect}"
 	params.delete("captures")
-	@user = User.find(params[:id]).update_attributes(params)
-	erb :user
+	User.find(params[:id]).update_attributes(params)
+	@user =  User.order("created_at").last
+	erb :profile
 end
 # == Delete User
 get '/delete_user' do
@@ -91,7 +94,7 @@ get '/delete_user/:id' do
 	puts "params.inspect: #{params.inspect}"
 	@user = User.find(params[:id]).destroy
 	flash[:notice] = "You have successfully been removed from the blog."
-	redirect '/profile'
+	redirect '/'
 end
 # ===== Sign In =====
 get '/user_sign_in' do
@@ -100,9 +103,9 @@ get '/user_sign_in' do
 end
 post '/user_sign_in' do
 	puts "\n******* user_sign_in *******"
-    @user = User.where(name: params[:name]).first
+    @user = User.where(username: params[:username]).first
 	if @user
-		if @user.user_id == params[:user_id]
+		if @user.password == params[:password]
 			session[:user_id] = @user.id
             @current_user = get_current_user
 			flash[:notice] = "You've been signed in successfully."
