@@ -10,20 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170628164426) do
-
-  create_table "blog", force: :cascade do |t|
-    t.string "user_id"
-    t.string "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20170629205823) do
 
   create_table "comments", force: :cascade do |t|
     t.string "user_id"
     t.string "post_id"
     t.string "comment"
     t.string "img_src"
+    t.datetime "created_at"
+  end
+
+  create_table "feed", force: :cascade do |t|
+    t.string "post_id"
+    t.string "comment_id"
     t.datetime "created_at"
   end
 
@@ -34,6 +33,12 @@ ActiveRecord::Schema.define(version: 20170628164426) do
     t.string "img_src"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "userfeed", force: :cascade do |t|
+    t.string "user_id"
+    t.string "feed_id"
+    t.datetime "created_at"
   end
 
   create_table "users", force: :cascade do |t|

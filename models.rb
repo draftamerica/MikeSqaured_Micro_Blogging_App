@@ -1,21 +1,32 @@
 class User < ActiveRecord::Base
-    has_one :blog
+    has_many :posts
+    has_many :userfeeds
+    has_many :feeds, through: :userfeed
     has_many :comments
 end
 
 class Post < ActiveRecord::Base
-    belongs_to :blog
+    belongs_to :user
     has_many :comments
+    has_one :feed
 end
 
 class Comment < ActiveRecord::Base
     belongs_to :user
     belongs_to :post
+    has_one :feed
 end
 
-class Blog < ActiveRecord::Base
+class Feed < ActiveRecord::Base
+    has_many :userfeeds
+    has_many :users, through: :userfeed
+    has_one :post
+    has_one :comment
+end
+
+class Userfeed < ActiveRecord::Base
     belongs_to :user
-    has_many :posts
+    belongs_to :feeds
 end
 
 
@@ -28,5 +39,8 @@ end
 # ======== comments =========
 # user_id, post_id, comment, created_at
 
-# ======== blog ========
-# user_id, title, created_at, updated_at
+# ======== feed ========
+# post_id, comment_id, created_at,
+
+# ======== userfeed ========
+# user_id, feed_id, created_at
