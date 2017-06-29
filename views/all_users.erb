@@ -1,2 +1,10 @@
 <!-- ======= views/all_users.erb ======= -->
-<h1>User Directory</h1>
+<h1>Directory</h1>
+
+<% puts "\n******* do loop (each_with_index) *******" %>
+<div id="users_list">
+    <% @users.each_with_index do |user, index| %>
+        <% puts "** user/index: #{user}: #{index}" %>
+        <p> <%= user[:username] %> </p>
+    <%end%>
+</div>
