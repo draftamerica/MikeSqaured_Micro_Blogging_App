@@ -94,7 +94,7 @@ get '/delete_user/:id' do
 	puts "params.inspect: #{params.inspect}"
 	@user = User.find(params[:id]).destroy
 	flash[:notice] = "You have successfully been removed from the blog."
-	redirect '/'
+	erb :home
 end
 # ===== Sign In =====
 get '/user_sign_in' do

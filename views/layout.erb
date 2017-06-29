@@ -8,11 +8,13 @@
 	<body>
 	    <!-- ======= header ======= -->
 	    <div id="header" class="section">
-	        <p>header</p>
+	        <!-- <p>header</p> -->
 	    <!-- ======= menu ======= -->
-			<div id="menu-container" class="section">
+		<% if session[:user_id] %>
+		  <div id="menu-container" class="section">
 				<%= erb :menu %>
 			</div>
+		<% end %>
 	    </div>
 		<!-- ====== Flash Notice ====== -->
 		<% if flash[:notice] %>
