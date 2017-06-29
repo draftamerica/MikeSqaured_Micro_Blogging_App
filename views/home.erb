@@ -1,9 +1,73 @@
-<!-- ======= views/menu.erb ======= -->
+<!-- ======= views/home.erb ======= -->
 
-<h1>Home</h1>
+<h1 id="h1" align="center">User Sign In</h1>
+
+
+<!-- username, password -->
+<div class="login_form">
+
+    <form  id="user_sign_in" method="POST" action="/user_sign_in">
+
+        <div><label for="username"><p id="user_name_label"><b>Username</b></p></label><input type="username" id="username" name="username" value=""></div>
+
+        <div><label for="password"><p id="user_password_label"><b>Password</b></p></label><input type="password" id="userpassword" name="password"  value=""></div><br>
+
+        <input type="submit" id="submituser">
+
+    </form>
+
+</div>
+
+<!-- REGISTRATION LOAD FORM BUTTON  -->
+<p id="register_text" align="center">New to the site? Register now!</p>
+<div id="register_area">
+    <input type="submit" id="register_submit" value="Register">
+</div>
+
+
+<!-- firstname, lastname, username, password, email -->
+<div id="register_form">
+
+
+    <h1 align="center">User Form</h1>
+
+    <form  id="user_registration_form" method="POST" action="/user">
+
+        <div><label for="firstname"><p id="reg_firstname_label"><b>First Name</b></p></label><input type="firstname" name="firstname" id="reg_firstname" value=""></div>
+
+        <div><label for="lastname"><p id="reg_lastname_label"><b>Last Name</b></p></label><input type="lastname" name="lastname" id="reg_lastname" value=""></div>
+
+        <div><label for="username"><p id="username_label"><b>Username</b></p></label><input type="username" id="reg_username" name="username" value=""></div>
+
+        <div><label for="password"><p id="reg_password_label"><b>Password</b></p></label><input type="password" id="reg_password" name="password" value=""></div>
+
+        <div><label for="email"><p id="reg_email_label"><b>Email</b></p></label><input type="email" id="reg_email" name="email" value=""></div><br>
+
+        <input type="submit" id="submituser">
+
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h1>Home</h1>
 
 <div id="homepage">
-    <h1>Welcome to Mike Sqaured</h1>
+    <h1>Welcome to Mike Squared</h1>
 
     <div id="account_log">
         <a href="/user_sign_in">User Sign In</a><br>
@@ -13,4 +77,4 @@
 
 <div id="newUser">
     <a href="/user_registration_form">Register</a><br>
-</div>
+</div> -->
