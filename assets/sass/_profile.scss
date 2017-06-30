@@ -1,0 +1,20 @@
+// ========== Profile ==========
+.sidebar-item { // rename
+    margin: 10px auto;
+    height: 100px;
+    width: 65%;
+    font-size: 20px;
+    transform: skewX(10deg);
+    line-height: 80px;
+    font-style: Arial, serif;
+    background-color: red;
+}
+.sidebar-item:hover { // rename
+    background-color: blue;
+}
+#num {
+    font-size: 25px;
+    font-family: Verdana serif;
+    text-align: center;
+    letter-spacing: 0.2em;
+}

@@ -1,0 +1,96 @@
+// ========== Registration Form ==========
+#register_area {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    color: orange;
+    font-size: 15px;
+    height: 240px;
+}
+#register_text {
+    position: relative;
+    visibility: visible;
+    top: 20px;
+    font-size: 20px;
+    color: blue;
+}
+#register_submit {
+    position: relative;
+    top: -70px;
+    height: 40px;
+    width: 80px;
+    background-color: yellow;
+    color: red;
+}
+#register_form {
+    position: relative;
+    visibility: hidden;
+    top: -100px;
+    height: 600px;
+    width: auto;
+    color: blue;
+    border: 1px solid green;
+    background-color: gold;
+    box-shadow: 60px 60px 60px 60px blue;
+}
+#username_label {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}
+#reg_password_label {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}
+#reg_firstname_label {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}
+#reg_lastname_label {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}
+#reg_email_label {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}
+#reg_username {
+    position: relative;
+    left: 540px;
+    height: 20px;
+    width: 150px;
+    background-color: cyan;
+}
+#reg_password {
+    position: relative;
+    left: 540px;
+    height: 20px;
+    width: 150px;
+    background-color: cyan;
+
+}
+#reg_firstname {
+    position: relative;
+    left: 540px;
+    height: 20px;
+    width: 150px;
+    background-color: cyan;
+}
+#reg_lastname {
+    position: relative;
+    left: 540px;
+    height: 20px;
+    width: 150px;
+    background-color: cyan;
+}
+#reg_email {
+    position: relative;
+    left: 540px;
+    height: 20px;
+    width: 150px;
+    background-color: cyan;
+}
