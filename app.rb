@@ -14,6 +14,29 @@ set :database, "sqlite3:mike_sqaured.db"
 # =======  sessions =======
 enable :sessions
 
+# ===== write ======
+get '/write' do
+	puts "\n******* write *******"
+	erb :write
+end
+
+post '/newpost' do
+	puts "\n***** newpost *****"
+	puts "params: #{params.inspect}"
+		Post.create(
+			title: params[:title],
+			content: params[:content]
+			)
+		@post = Post.order("created_at").last
+		puts "@post: #{@post.inspect}"
+ 	erb :blog
+end
+
+get '/blog' do
+	puts "\n******* write *******"
+	erb :blog
+end
+
 # ======= home =======
 get '/' do
 	puts "\n******* home *******"
