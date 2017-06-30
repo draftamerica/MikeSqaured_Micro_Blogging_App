@@ -1,6 +1,8 @@
 @import "loginform";
 @import "registrationform";
 @import "writepage";
+@import "navbar";
+@import "profile";
 
 h1
 {
@@ -12,7 +14,7 @@ body
 {
     background-color: #ffffcc;
 }
-//====USER LOGIN FORM====
+//====USER LOGIN FORM=====
 .login_form
 {
     position: relative;
