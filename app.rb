@@ -14,7 +14,6 @@ set :database, "sqlite3:microblog2.db"
 # =======  sessions =======
 enable :sessions
 
-<<<<<<< HEAD
 # ===== write ======
 get '/write' do
 	puts "\n******* write *******"
