@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 @import "loginform";
 @import "registrationform";
 @import "writepage";
-@import "navbar";
+@import "menu";
 @import "profile";
 
 h1
@@ -201,24 +200,3 @@ body
     width: 550px;
     word-wrap: break-word;
 }
-=======
-// ========= Body =========
-// h1
-// {
-//     text-shadow: 2px 2px gold;
-//     letter-spacing: 0.1em;
-//     margin-bottom: 0;
-// }
-// body
-// {
-//     background-color: #ffffcc;
-// }
-
-
-// =========== Imports ==========
-@import "menu";
-// @import "loginform";
-// @import "registrationform";
-// @import "writepage";
-// @import "profile";
->>>>>>> 0a9e3ae2be2f0c966cbfef4742ad1e956d325f8c

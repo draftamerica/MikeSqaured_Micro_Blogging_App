@@ -9,43 +9,15 @@ require "sinatra/flash"
 require './models'
 
 # ======= database =======
-set :database, "sqlite3:microblog2.db"
+set :database, "sqlite3:mike_sqaured.db"
 
 # =======  sessions =======
 enable :sessions
 
-# ===== write ======
-get '/write' do
-	puts "\n******* write *******"
-	erb :write
-end
-
-post '/newpost' do
-	puts "\n***** newpost *****"
-	puts "params: #{params.inspect}"
-		Post.create(
-			title: params[:title],
-			content: params[:content]
-			)
-		@post = Post.order("created_at").last
-		puts "@post: #{@post.inspect}"
- 	erb :blog
-end
-
-get '/blog' do
-	puts "\n******* write *******"
-	erb :blog
-end
-
-# ======= Home =======
+# ======= home =======
 get '/' do
 	puts "\n******* home *******"
 	erb :home
-end
-# ===== Welcome Page =====
-get '/welcome_page' do
-	puts "\n******* welcome_page *******"
-	erb :welcome_page
 end
 # ===== Profile =====
 get '/profile' do
@@ -116,12 +88,12 @@ post '/user' do
 	redirect '/profile'
 end
 # == Read User Info
-get '/all_users' do
-	puts "\n******* all_users *******"
-	@users = User.all
-	puts "@users.inspect: #{@users.inspect}"
-	erb :all_users
-end
+# get '/all_users' do
+# 	puts "\n******* all_users *******"
+# 	@users = User.all
+# 	puts "@users.inspect: #{@users.inspect}"
+# 	erb :all_users
+# end
 # # == Update User Info
 get '/update_user_form' do
 	puts "\n******* update_user_form *******"
@@ -150,7 +122,6 @@ get '/delete_user/:id' do
 	puts "\n******* delete_user *******"
 	puts "params.inspect: #{params.inspect}"
 	@user = User.find(params[:id]).destroy
-	puts "@user, #{@user}"
 	flash[:notice] = "You have successfully been removed from the blog."
 	redirect '/'
 end
@@ -167,7 +138,7 @@ post '/user_sign_in' do
 			session[:user_id] = @user.id
             @current_user = get_current_user
 			flash[:notice] = "You've been signed in successfully."
-			redirect '/welcome_page'
+			redirect '/profile'
 		else
 			flash[:notice] = "Please check your username and password and try again."
 			redirect "/user_sign_in"
