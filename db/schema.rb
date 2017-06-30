@@ -10,30 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170628164426) do
-
-  create_table "blog", force: :cascade do |t|
-    t.string "user_id"
-    t.string "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20170629205823) do
 
   create_table "comments", force: :cascade do |t|
-    t.string "user_id"
-    t.string "post_id"
+    t.integer "user_id"
+    t.integer "post_id"
     t.string "comment"
     t.string "img_src"
     t.datetime "created_at"
   end
 
+  create_table "feed", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "comment_id"
+    t.datetime "created_at"
+  end
+
   create_table "posts", force: :cascade do |t|
-    t.string "blog_id"
+    t.integer "blog_id"
     t.string "title"
     t.string "content"
     t.string "img_src"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "userfeed", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "feed_id"
+    t.datetime "created_at"
   end
 
   create_table "users", force: :cascade do |t|

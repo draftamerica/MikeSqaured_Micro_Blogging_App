@@ -1,340 +1,41 @@
-.login_form {
-  position: relative;
-  top: 20px;
-  height: 450px;
-  width: auto;
-  color: blue;
-  border: 1px solid green;
-  background: black;
-  visibility: visible;
-  box-shadow: 60px 60px 60px 60px red; }
+/*
+Error: Invalid CSS after "...ort "loginform"": expected "{", was ";"
+        on line 2 of assets/sass/styles.scss
 
-#user_name_label {
-  text-align: center;
-  color: red;
-  font-size: 25px; }
+1: <<<<<<< HEAD
+2: @import "loginform";
+3: @import "registrationform";
+4: @import "writepage";
+5: @import "navbar";
+6: @import "profile";
+7: 
 
-#user_password_label {
-  text-align: center;
-  color: red;
-  font-size: 25px; }
-
-#username {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#userpassword {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#submituser {
-  position: relative;
-  left: 580px;
-  height: 40px;
-  width: 80px;
-  background-color: yellow;
-  color: red; }
-
-#register_area {
-  position: relative;
-  top: 100px;
-  text-align: center;
-  color: orange;
-  font-size: 15px;
-  height: 240px; }
-
-#register_text {
-  position: relative;
-  visibility: visible;
-  top: 20px;
-  font-size: 20px;
-  color: blue; }
-
-#register_area {
-  position: relative;
-  top: 100px;
-  text-align: center;
-  color: orange;
-  font-size: 15px;
-  height: 240px; }
-
-#register_text {
-  position: relative;
-  visibility: visible;
-  top: 20px;
-  font-size: 20px;
-  color: blue; }
-
-#register_submit {
-  position: relative;
-  top: -70px;
-  height: 40px;
-  width: 80px;
-  background-color: yellow;
-  color: red; }
-
-#register_form {
-  position: relative;
-  visibility: hidden;
-  top: -100px;
-  height: 600px;
-  width: auto;
-  color: blue;
-  border: 1px solid green;
-  background-color: gold;
-  box-shadow: 60px 60px 60px 60px blue; }
-
-#username_label {
-  text-align: center;
-  color: red;
-  font-size: 20px; }
-
-#reg_password_label {
-  text-align: center;
-  color: red;
-  font-size: 20px; }
-
-#reg_firstname_label {
-  text-align: center;
-  color: red;
-  font-size: 20px; }
-
-#reg_lastname_label {
-  text-align: center;
-  color: red;
-  font-size: 20px; }
-
-#reg_email_label {
-  text-align: center;
-  color: red;
-  font-size: 20px; }
-
-#reg_username {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#reg_password {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#reg_firstname {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#reg_lastname {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#reg_email {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#title {
-  font-size: 25px;
-  font-style: Verdana serif;
-  letter-spacing: 0.2em;
-  color: orange; }
-
-#title_box {
-  height: 40px;
-  width: 550px; }
-
-#content {
-  font-size: 25px;
-  font-style: Verdana serif;
-  letter-spacing: 0.2em;
-  color: orange; }
-
-#content_box {
-  height: 100px;
-  width: 550px;
-  word-wrap: break-word; }
-
-h1 {
-  text-shadow: 2px 2px gold;
-  letter-spacing: 0.1em;
-  margin-bottom: 0; }
-
-body {
-  background-color: #ffffcc; }
-
-.login_form {
-  position: relative;
-  top: 20px;
-  height: 450px;
-  width: auto;
-  color: blue;
-  border: 1px solid green;
-  background: black;
-  visibility: visible;
-  box-shadow: 60px 60px 60px 60px red; }
-
-#user_name_label {
-  text-align: center;
-  color: red;
-  font-size: 25px; }
-
-#user_password_label {
-  text-align: center;
-  color: red;
-  font-size: 25px; }
-
-#username {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#userpassword {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#submituser {
-  position: relative;
-  left: 580px;
-  height: 40px;
-  width: 80px;
-  background-color: yellow;
-  color: red; }
-
-#register_area {
-  position: relative;
-  top: 100px;
-  text-align: center;
-  color: orange;
-  font-size: 15px;
-  height: 240px; }
-
-#register_text {
-  position: relative;
-  visibility: visible;
-  top: 20px;
-  font-size: 20px;
-  color: blue; }
-
-#register_submit {
-  position: relative;
-  top: -70px;
-  height: 40px;
-  width: 80px;
-  background-color: yellow;
-  color: red; }
-
-#register_form {
-  position: relative;
-  visibility: hidden;
-  top: -100px;
-  height: 600px;
-  width: auto;
-  color: blue;
-  border: 1px solid green;
-  background-color: gold;
-  box-shadow: 60px 60px 60px 60px blue; }
-
-#username_label {
-  text-align: center;
-  color: red;
-  font-size: 20px; }
-
-#reg_password_label {
-  text-align: center;
-  color: red;
-  font-size: 20px; }
-
-#reg_firstname_label {
-  text-align: center;
-  color: red;
-  font-size: 20px; }
-
-#reg_lastname_label {
-  text-align: center;
-  color: red;
-  font-size: 20px; }
-
-#reg_email_label {
-  text-align: center;
-  color: red;
-  font-size: 20px; }
-
-#reg_username {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#reg_password {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#reg_firstname {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#reg_lastname {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#reg_email {
-  position: relative;
-  left: 540px;
-  height: 20px;
-  width: 150px;
-  background-color: cyan; }
-
-#title {
-  font-size: 25px;
-  font-style: Verdana serif;
-  letter-spacing: 0.2em;
-  color: orange; }
-
-#title_box {
-  height: 40px;
-  width: 550px; }
-
-#content {
-  font-size: 25px;
-  font-style: Verdana serif;
-  letter-spacing: 0.2em;
-  color: orange; }
-
-#content_box {
-  height: 100px;
-  width: 550px;
-  word-wrap: break-word; }
-
-/*# sourceMappingURL=styles.css.map */
+Backtrace:
+assets/sass/styles.scss:2
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1207:in `expected'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1137:in `expected'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1132:in `tok!'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:665:in `block'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:658:in `ruleset'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:684:in `block_child'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:674:in `block_contents'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:125:in `stylesheet'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:41:in `parse'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:406:in `_to_tree'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/Users/draftamerica/.rvm/gems/ruby-2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...ort \"loginform\"\": expected \"{\", was \";\"\A         on line 2 of assets/sass/styles.scss\A \A 1: <<<<<<< HEAD\A 2: @import \"loginform\";\A 3: @import \"registrationform\";\A 4: @import \"writepage\";\A 5: @import \"navbar\";\A 6: @import \"profile\";\A 7: "; }

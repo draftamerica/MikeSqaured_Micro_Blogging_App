@@ -9,11 +9,12 @@ require "sinatra/flash"
 require './models'
 
 # ======= database =======
-set :database, "sqlite3:mike_sqaured.db"
+set :database, "sqlite3:microblog2.db"
 
 # =======  sessions =======
 enable :sessions
 
+<<<<<<< HEAD
 # ===== write ======
 get '/write' do
 	puts "\n******* write *******"
@@ -38,9 +39,18 @@ get '/blog' do
 end
 
 # ======= home =======
+=======
+
+# ======= Home =======
+>>>>>>> 0a9e3ae2be2f0c966cbfef4742ad1e956d325f8c
 get '/' do
 	puts "\n******* home *******"
 	erb :home
+end
+# ===== Welcome Page =====
+get '/welcome_page' do
+	puts "\n******* welcome_page *******"
+	erb :welcome_page
 end
 # ===== Profile =====
 get '/profile' do
@@ -54,6 +64,35 @@ get "/logout" do
     session[:user_id] = nil
 	flash[:notice] = "You've been logged out successfully."
 	redirect '/'
+end
+
+# ===== write ======
+get '/write' do
+	puts "\n******* write *******"
+	erb :write
+end
+
+post '/blog' do
+	puts "\n***** blog *****"
+	puts "params: #{params.inspect}"
+		Post.create(
+			title: params[:title],
+			content: params[:content]
+			)
+		@post = Post.order("created_at").last
+		puts "@post: #{@post.inspect}"
+	erb :blog
+end
+
+get '/blog' do
+	puts "\n******* write *******"
+	erb :blog
+end
+
+# ==== Display Personal Info - styled ====
+get '/personalinfo' do
+	puts "\n******* personalinfo *******"
+	erb :personalinfo
 end
 
 # ===== User =====
@@ -133,7 +172,7 @@ post '/user_sign_in' do
 			session[:user_id] = @user.id
             @current_user = get_current_user
 			flash[:notice] = "You've been signed in successfully."
-			redirect '/'
+			redirect '/welcome_page'
 		else
 			flash[:notice] = "Please check your username and password and try again."
 			redirect "/user_sign_in"

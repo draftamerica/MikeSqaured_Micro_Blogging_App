@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 //==PROFILE PAGE STYLES==
 .sidebar-item
 {
+=======
+// ========== Profile ==========
+.sidebar-item { // rename
+>>>>>>> 0a9e3ae2be2f0c966cbfef4742ad1e956d325f8c
     margin: 10px auto;
     height: 100px;
     width: 65%;
@@ -10,7 +15,19 @@
     font-style: Arial, serif;
     background-color: red;
 }
+<<<<<<< HEAD
 .sidebar-item:hover
 {
     background-color: blue;
 }
+=======
+.sidebar-item:hover { // rename
+    background-color: blue;
+}
+#num {
+    font-size: 25px;
+    font-family: Verdana serif;
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+>>>>>>> 0a9e3ae2be2f0c966cbfef4742ad1e956d325f8c
