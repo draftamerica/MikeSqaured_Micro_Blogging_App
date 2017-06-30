@@ -6,6 +6,15 @@
 	</head>
   <!-- ======= ======= ======= body ======= ======= ======= -->
 	<body>
+		<!-- ======= header ======= -->
+	    <div id="header" class="section">
+ 	    <!-- ======= menu ======= -->
+		<% if session[:user_id] %>
+		  <div id="menu-container" class="section">
+				<%= erb :menu %>
+			</div>
+		<% end %>
+	    </div>
 		<!-- ====== Flash Notice ====== -->
 		<% if flash[:notice] %>
 			<div class="flash_notice">

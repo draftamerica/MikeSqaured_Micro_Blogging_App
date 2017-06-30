@@ -1,0 +1,58 @@
+//==LOGIN FORM==
+.login_form {
+  position: relative;
+  top: 20px;
+  height: 450px;
+  width: auto;
+  color: blue;
+  border: 1px solid green;
+  background: black;
+  visibility: visible;
+  box-shadow: 60px 60px 60px 60px red; }
+
+#user_name_label {
+  text-align: center;
+  color: red;
+  font-size: 25px; }
+
+#user_password_label {
+  text-align: center;
+  color: red;
+  font-size: 25px; }
+
+#username {
+  position: relative;
+  left: 540px;
+  height: 20px;
+  width: 150px;
+  background-color: cyan; }
+
+#userpassword {
+  position: relative;
+  left: 540px;
+  height: 20px;
+  width: 150px;
+  background-color: cyan; }
+
+#submituser {
+  position: relative;
+  left: 580px;
+  height: 40px;
+  width: 80px;
+  background-color: yellow;
+  color: red; }
+
+#register_area {
+  position: relative;
+  top: 100px;
+  text-align: center;
+  color: orange;
+  font-size: 15px;
+  height: 240px; }
+
+#register_text {
+  position: relative;
+  visibility: visible;
+  top: 20px;
+  font-size: 20px;
+  color: blue; }

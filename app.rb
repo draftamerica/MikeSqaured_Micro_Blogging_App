@@ -1,7 +1,7 @@
 # ======= requires =======
 require "sinatra"
 require 'sinatra/activerecord'
-require "sinatra/reloader" if development?
+require "sinatra/reloader"
 require "sass"
 require "sinatra/flash"
 
@@ -39,8 +39,8 @@ get '/write' do
 	erb :write
 end
 
-post '/newpost' do
-	puts "\n***** newpost *****"
+post '/blog' do
+	puts "\n***** blog *****"
 	puts "params: #{params.inspect}"
 		Post.create(
 			title: params[:title],
@@ -138,7 +138,7 @@ post '/user_sign_in' do
 			session[:user_id] = @user.id
             @current_user = get_current_user
 			flash[:notice] = "You've been signed in successfully."
-			redirect '/'
+			redirect '/profile'
 		else
 			flash[:notice] = "Please check your username and password and try again."
 			redirect "/user_sign_in"
