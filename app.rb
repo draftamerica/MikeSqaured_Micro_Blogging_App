@@ -9,7 +9,7 @@ require "sinatra/flash"
 require './models'
 
 # ======= database =======
-set :database, "sqlite3:mike_sqaured.db"
+set :database, "sqlite3:microblog2.db"
 
 # =======  sessions =======
 enable :sessions
@@ -115,7 +115,7 @@ post '/user_sign_in' do
 			session[:user_id] = @user.id
             @current_user = get_current_user
 			flash[:notice] = "You've been signed in successfully."
-			redirect '/'
+			redirect '/welcome_page'
 		else
 			flash[:notice] = "Please check your username and password and try again."
 			redirect "/user_sign_in"
