@@ -37,11 +37,7 @@ get '/blog' do
 	erb :blog
 end
 
-# ======= home =======
-=======
-
 # ======= Home =======
->>>>>>> 0a9e3ae2be2f0c966cbfef4742ad1e956d325f8c
 get '/' do
 	puts "\n******* home *******"
 	erb :home
