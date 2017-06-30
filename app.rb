@@ -14,7 +14,12 @@ set :database, "sqlite3:mike_sqaured.db"
 # =======  sessions =======
 enable :sessions
 
-# ======= home =======
+# ===== Landing Page =====
+get '/welcome_page' do
+	puts "\n******* welcome_page *******"
+	erb :welcome_page
+end
+# ======= Home =======
 get '/' do
 	puts "\n******* home *******"
 	erb :home
