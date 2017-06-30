@@ -56,6 +56,11 @@ get '/blog' do
 	erb :blog
 end
 
+# ==== Display Personal Info - styled ====
+get '/personalinfo' do
+	puts "\n******* personalinfo *******"
+	erb :personalinfo
+end
 
 # ===== User =====
 get '/user' do
