@@ -14,15 +14,16 @@ set :database, "sqlite3:microblog2.db"
 # =======  sessions =======
 enable :sessions
 
-# ===== Landing Page =====
-get '/welcome_page' do
-	puts "\n******* welcome_page *******"
-	erb :welcome_page
-end
+
 # ======= Home =======
 get '/' do
 	puts "\n******* home *******"
 	erb :home
+end
+# ===== Welcome Page =====
+get '/welcome_page' do
+	puts "\n******* welcome_page *******"
+	erb :welcome_page
 end
 # ===== Profile =====
 get '/profile' do
@@ -36,6 +37,35 @@ get "/logout" do
     session[:user_id] = nil
 	flash[:notice] = "You've been logged out successfully."
 	redirect '/'
+end
+
+# ===== write ======
+get '/write' do
+	puts "\n******* write *******"
+	erb :write
+end
+
+post '/blog' do
+	puts "\n***** blog *****"
+	puts "params: #{params.inspect}"
+		Post.create(
+			title: params[:title],
+			content: params[:content]
+			)
+		@post = Post.order("created_at").last
+		puts "@post: #{@post.inspect}"
+	erb :blog
+end
+
+get '/blog' do
+	puts "\n******* write *******"
+	erb :blog
+end
+
+# ==== Display Personal Info - styled ====
+get '/personalinfo' do
+	puts "\n******* personalinfo *******"
+	erb :personalinfo
 end
 
 # ===== User =====
