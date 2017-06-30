@@ -33,6 +33,30 @@ get "/logout" do
 	redirect '/'
 end
 
+# ===== write ======
+get '/write' do
+	puts "\n******* write *******"
+	erb :write
+end
+
+post '/newpost' do
+	puts "\n***** newpost *****"
+	puts "params: #{params.inspect}"
+		Post.create(
+			title: params[:title],
+			content: params[:content]
+			)
+		@post = Post.order("created_at").last
+		puts "@post: #{@post.inspect}"
+	erb :blog
+end
+
+get '/blog' do
+	puts "\n******* write *******"
+	erb :blog
+end
+
+
 # ===== User =====
 get '/user' do
 	puts "\n******* user *******"
